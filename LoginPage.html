@@ -7,20 +7,36 @@
     </head>
     <body>
         <form>
-            <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-             </div>
-             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-             </div>
-             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-             </div>
-             <a href=""><button type="submit" class="btn btn-primary">Submit</button></a>
-        </form>  
+            <a href="LoginPage.html"><img src="images/jacket.png" width="200" height="200"></a>
+            <p id="paragraph1">Where you meet style that fit</p>
+            <br>
+            <form>
+                <label for="userEmailInput">Email</label>
+                <input type="text" id="userEmailInput"/><br><p id="userMessage1">Enter your email...</p>
+                <label for ="userPasswordInput">Password</label><br>
+                <input type="password" id="userPasswordInput"/><br><p id="userMessage2">Enter Password</p>
+                <button><a href="#" onclick="verifyUser()">Submit</a></button>
+            </form>
+        <script>
+            function verifyUser(){
+                var userEmail = document.getElementById("userEmailInput").value;
+                var userPassword = document.getElementById("userPasswordInput").value;
+
+                 checkUserCreds(userEmail,userPassword);
+            }
+
+            function checkUserCreds(userEmail,userPassword){
+                var systemEmail = "matutoaneneo9@gmail.com";
+                var systemPassword = "0677129042";
+
+                if(userEmail == systemEmail && userPassword == systemPassword){
+                    document.getElementById("logInMessage").innerHTML = "Correct, logging you in...";
+                }
+                else{
+                    document.getElementById("logInMessage").innerHTML = "Please enter Correct email or Password";
+                }
+            }
+
+        </script>
     </body>
 </html>
