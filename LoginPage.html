@@ -11,18 +11,18 @@
             <p id="paragraph1">Where you meet style that fit</p>
             <br>
             <form>
-                <label for="userEmailInput">Email</label>
-                <input type="text" id="userEmailInput"/><br><p id="userMessage1">Enter your email...</p>
+                <label for="userEmailInput">Email:</label>
+                <input type="text" id="userEmailInput"/><br>
                 <label for ="userPasswordInput">Password</label><br>
                 <input type="password" id="userPasswordInput"/><br><p id="userMessage2">Enter Password</p>
-                <button><a href="#" onclick="verifyUser()">Submit</a></button>
+                <button><a href="index.html" onclick="verifyUser()">Submit</a></button>
             </form>
         <script>
             function verifyUser(){
                 var userEmail = document.getElementById("userEmailInput").value;
                 var userPassword = document.getElementById("userPasswordInput").value;
 
-                 checkUserCreds(userEmail,userPassword);
+                 checkUserCreds(userEmail, userPassword);
             }
 
             function checkUserCreds(userEmail,userPassword){
@@ -30,10 +30,9 @@
                 var systemPassword = "0677129042";
 
                 if(userEmail == systemEmail && userPassword == systemPassword){
-                    document.getElementById("logInMessage").innerHTML = "Correct, logging you in...";
-                }
-                else{
-                    document.getElementById("logInMessage").innerHTML = "Please enter Correct email or Password";
+                    document.getElementById("userMessage2").innerHTML = "Correct, logging you in...";
+                }else{
+                    document.getElementById("userMessage2").innerHTML = "Please enter Correct email or Password";
                 }
             }
 
