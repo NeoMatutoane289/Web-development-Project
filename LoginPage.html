@@ -31,6 +31,7 @@
 
                 if(userEmail == systemEmail && userPassword == systemPassword){
                     document.getElementById("userMessage2").innerHTML = "Correct, logging you in...";
+                    window.location.href = "index.html";  // grants the user access to site
                 }else{
                     document.getElementById("userMessage2").innerHTML = "Please enter Correct email or Password";
                 }
