@@ -1,0 +1,39 @@
+form{
+    text-align: center;
+    background: teal;
+    font-family: Segoe UI;
+    font-size: medium;
+    
+}
+
+button{
+    background: goldenrod;
+    border-top: chocolate;
+    width: 100px;
+    height: 30px;
+}
+#paragraph1{
+    color: aliceblue;
+    font-size: larger;
+    font-style: italic;
+}
+
+body{
+    background: royalblue; 
+}
+
+input{
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
