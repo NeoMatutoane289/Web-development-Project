@@ -17,7 +17,7 @@
 
                 <main id="login-main">
                     <form class="login-Form" id="loginform" novalidate>
-                        <h2 id="formTitle">WELCOME</h2>
+                        <h2 id="form-title">WELCOME</h2>
 
                         <div id="form-group">
                             <label for="userEmailInput" class="form-label">Email Address</label>
@@ -58,4 +58,59 @@
                 </main>
             </div>
         </div>
+
+        <script>
+            class checkUserCreds {
+                constructor() {
+                    this.form = document.getElementById('loginForm');
+                    this.emailInput = document.getElementById('userEmailInput');
+                    this.passwordInput = document.getElementById('userPasswordInput');
+                    this.submitBtn = document.getElementById('submitBtn');
+                    this.messageE1 = document.getElementById('userMessage');
+
+                    this.init();
+                }
+
+                init() {
+                   this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                   this.emailInput.addEventListener('input', () => this.clearError('email'));
+                   this.passwordInput.addEventListener('input', () => this.clearError('password')); 
+                }
+
+                async handleSubmit(e) {
+                    e.preventDefault();
+
+                    if(!this.validateForm()) {
+                        return;
+                    }
+
+                    this.setLoading(true);
+
+                    try {
+                        await this.verifyUser();
+                    } catch (error) {
+                        this.showMessage('error occurred. please try again','error');
+                    } finally {
+                        this.setLoading(false);
+                    }
+                }
+
+                validateForm() {
+                    let isValid =true;
+
+                    //Email validation
+                    const email = this.emailInput.value.trim();
+                    if (!email) {
+                        this.showError('email', 'Email is required');
+                        isValid = false;
+                    } else if (!this.isValidEmail(email)) {
+                        this.showError('email', 'Please enter valid email address');
+                        isValid = false;
+                    }
+
+                    //Pasword validation
+                    
+                }
+            }
+        </script>
        
