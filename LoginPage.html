@@ -6,37 +6,56 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form>
-            <a href="LoginPage.html"><img src="images/jacket.png" width="200" height="200"></a>
-            <p id="paragraph1">Where you meet style that fit</p>
-            <br>
-            <form>
-                <label for="userEmailInput">Email:</label>
-                <input type="text" id="userEmailInput"/><br>
-                <label for ="userPasswordInput">Password</label><br>
-                <input type="password" id="userPasswordInput"/><br><p id="userMessage2">Enter Password</p>
-                <button><a href="index.html" onclick="verifyUser()">Submit</a></button>
-            </form>
-        <script>
-            function verifyUser(){
-                var userEmail = document.getElementById("userEmailInput").value;
-                var userPassword = document.getElementById("userPasswordInput").value;
+        <div class="login-container">
+            <div class="login-card">
+                <header id="login-header">
+                    <a href="LoginPage.html" class="LoginPage">
+                        <img src="images/jacket.png" width="200" height="200">
+                    </a> 
+                    <h3 id="tagline">Wher you meet style that fit</h3>
+                </header>
 
-                 checkUserCreds(userEmail, userPassword);
-            }
+                <main id="login-main">
+                    <form class="login-Form" id="loginform" novalidate>
+                        <h2 id="formTitle">WELCOME</h2>
 
-            function checkUserCreds(userEmail,userPassword){
-                var systemEmail = "matutoaneneo9@gmail.com";
-                var systemPassword = "0677129042";
+                        <div id="form-group">
+                            <label for="userEmailInput" class="form-label">Email Address</label>
+                            <input
+                                type="text"
+                                id="userEmailInput"
+                                class="form-input"
+                                placeholder="Enter your email"
+                                required
+                                aria-errormessage="email-error"
+                                >
+                                <span id="email-error" class="email-message" role="alert"></span>
+                        </div> 
 
-                if(userEmail == systemEmail && userPassword == systemPassword){
-                    document.getElementById("userMessage2").innerHTML = "Correct, logging you in...";
-                    window.location.href = "index.html";  // grants the user access to site
-                }else{
-                    document.getElementById("userMessage2").innerHTML = "Please enter Correct email or Password";
-                }
-            }
+                        <div id="form-group">
+                            <label for="userPassworInput" class="form-label">Password</label>
+                            <input
+                                type="password"
+                                id="usePasswordInput"
+                                class="form-input"
+                                placeholder="Enter your Password"
+                                required
+                                aria-errormessage="password-error"
+                             >
+                             <span id="email-error" class="email-message" role="alert"></span>
 
-        </script>
-    </body>
-</html>
+                        <div id="userMessage" class="message" role="alert" aria-live="polite"></div>
+
+                         <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span class="btn-text">Sign In</span>
+                                    <span class="btn-loader" aria-hidden="true"></span>
+                         </button>
+
+                         <div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot your password?</a>
+                    </div>
+                 </form>
+                </main>
+            </div>
+        </div>
+       
