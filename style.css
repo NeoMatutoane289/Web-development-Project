@@ -1,34 +1,55 @@
-form{
+#logo{
     text-align: center;
-    background: teal;
+}
+
+#header{
+    text-align: center;
     font-family: Segoe UI;
-    font-size: medium;
-    
+    font-style: oblique;
+}
+
+#Slogan{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#welcomeM{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#signUpM{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#suggestion{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#signUpForm{
+    text-align: center;
+}
+
+label{
+    font-family: Segoe UI;
+}
+
+#freeMode{
+    text-align: center;
+}
+
+
+button:hover{
+    text-shadow: slategray;
 }
 
 button{
-    background: goldenrod;
-    border-top: chocolate;
-    width: 100px;
-    height: 30px;
+    background: white;
+    border-radius: 50px;
+    border: 30%;
 }
-#paragraph1{
-    color: aliceblue;
-    font-size: larger;
-    font-style: italic;
-}
-
-body{
-    background: royalblue; 
-}
-
-input{
-    background: transparent;
-}
-
-
-
-
 
 
 
