@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Profile - SpaZaTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>SpaZaTrack</h1>
+            <p>Setup Your Store Profile</p>
+        </div>
+
+        <div class="profile-form-container">
+            <form id="storeProfileForm">
+                <h2>Store Information</h2>
+                
+                <div class="form-section">
+                    <h3>Basic Details</h3>
+                    <div class="form-group">
+                        <label for="storeName">Store Name *</label>
+                        <input type="text" id="storeName" name="storeName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="businessType">Business Type</label>
+                        <select id="businessType" name="businessType">
+                            <option value="">Select Business Type</option>
+                            <option value="retail">Retail Store</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="grocery">Grocery Store</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Store Description</label>
+                        <textarea id="description" name="description" rows="3" placeholder="Brief description of your store"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://yourstore.com">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Address</h3>
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">State/Province</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zipCode">ZIP/Postal Code</label>
+                            <input type="text" id="zipCode" name="zipCode">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Operating Hours</h3>
+                    <div class="hours-container">
+                        <div class="day-hours">
+                            <label>Monday</label>
+                            <input type="time" name="mondayOpen"> - <input type="time" name="mondayClose">
+                            <label><input type="checkbox" name="mondayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Tuesday</label>
+                            <input type="time" name="tuesdayOpen"> - <input type="time" name="tuesdayClose">
+                            <label><input type="checkbox" name="tuesdayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Wednesday</label>
+                            <input type="time" name="wednesdayOpen"> - <input type="time" name="wednesdayClose">
+                            <label><input type="checkbox" name="wednesdayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Thursday</label>
+                            <input type="time" name="thursdayOpen"> - <input type="time" name="thursdayClose">
+                            <label><input type="checkbox" name="thursdayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Friday</label>
+                            <input type="time" name="fridayOpen"> - <input type="time" name="fridayClose">
+                            <label><input type="checkbox" name="fridayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Saturday</label>
+                            <input type="time" name="saturdayOpen"> - <input type="time" name="saturdayClose">
+                            <label><input type="checkbox" name="saturdayClosed"> Closed</label>
+                        </div>
+                        <div class="day-hours">
+                            <label>Sunday</label>
+                            <input type="time" name="sundayOpen"> - <input type="time" name="sundayClose">
+                            <label><input type="checkbox" name="sundayClosed"> Closed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" id="saveProfileBtn">Save Profile</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="storeProfile.js"></script>
+</body>
+</html>

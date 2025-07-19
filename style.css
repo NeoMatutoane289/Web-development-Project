@@ -1,10 +1,292 @@
+/* Container and Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-buttons button {
+    margin: 0 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+/* Hours Styling */
+.hours-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day-hours {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.day-hours label:first-child {
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.day-hours input[type="time"] {
+    width: 100px;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo-section {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #34495e;
+    color: white;
+}
+
+.nav-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background: #2980b9;
+}
+
+/* Profile Display */
+.profile-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.info-item span {
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.hours-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.hour-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.hour-item .day {
+    font-weight: 600;
+}
+
+.hour-item .time {
+    color: #7f8c8d;
+}
+
+/* Auth Form Styling */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+    
+    .nav-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px 0;
+    }
+    
+    .nav-menu li {
+        flex-shrink: 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 #logo{
     text-align: center;
 }
 
-#header{
+#appName{
     text-align: center;
     font-family: Segoe UI;
+    font-size: xx-large;
     font-style: oblique;
 }
 
@@ -13,48 +295,19 @@
     font-family: Segoe UI;
 }
 
-#welcomeM{
+#welcomeText{
+    text-align: center;
+    font-family: Segoe UI;
+    font-style: oblique;
+}
+
+#appText{
     text-align: center;
     font-family: Segoe UI;
 }
 
-#signUpM{
+#signUpText{
     text-align: center;
     font-family: Segoe UI;
 }
-
-#suggestion{
-    text-align: center;
-    font-family: Segoe UI;
-}
-
-#signUpForm{
-    text-align: center;
-}
-
-label{
-    font-family: Segoe UI;
-}
-
-#freeMode{
-    text-align: center;
-}
-
-
-button:hover{
-    text-shadow: slategray;
-}
-
-button{
-    background: white;
-    border-radius: 50px;
-    border: 30%;
-}
-
-
-
-
-
-
-
 

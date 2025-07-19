@@ -5,53 +5,60 @@
         <meta name="viewpoint" content="width=device-width, initialscale=1.0"/>
         <script src="https://accounts.google.com/gsi/client" async defer></script>
         <meta charset="UTF-8">
+        <title>SpaZaTrack - Store Management</title>
     </head>
     <body>
         <div id="logo">
             <img src="images/jacket.png" width="150" height="150">
         </div>
         <div id="header">
-            <h1>SpaZaTrack</h1>
-            <p id="Slogan">Store Mangement in your pocket</p>
-            </div>
+            <h1 id="appName">SpaZaTrack</h1>
+            <p id="Slogan">Store Management in your pocket</p>
+        </div>
         <br>
         <div id="welcomeM">
-            <h1>Welcome</h1>
+            <h1 id="welcomeText">Welcome</h1>
+            <p id="appText">your store efficiently with our comprehensive inventory system</p>
+            
         </div>
-            <p id="signUpM">SignUp to start managing your store to greatness</p>
+        <div id="signUpM">
+            <h2 id="signUpText">Get Started</h2>
+            <p id="suggestion">Create your account to start managing your store</p>
+        </div>
 
-        <div id="auth-Container">
-            <div class="googleSignUp">
-                 <div id="g_id_onload"
-                             data-client_id="YOUR_GOOGLE_CLIENT_ID"
-                             data-context="signin"
-                             data-ux_mode="popup"
-                             data-callback="handleGoogleSignIn"
-                             data-auto_prompt="false">
-                        </div>
-                        
-                        <div class="g_id_signin" 
-                             data-type="standard"
-                             data-shape="rectangular"
-                             data-theme="outline"
-                             data-text="continue_with"
-                             data-size="large"
-                             data-logo_alignment="left">
-                        </div>
-                        <br>
-                        <P id="suggestion">or</P>
-                        <br>
-                        <div id="freeMode">
-                            <button class="userMode">Free Mode</button>
-                        </div>
+        <div id="signUpForm">
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="userEmailInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="userPasswordInput" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" id="signInBtn">Sign In</button>
+                    <button type="button" id="signUpBtn">Sign Up</button>
+                </div>
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
             </div>
+
+            <div id="g_id_onload"
+                 data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
         </div>
+
+        <div id="freeMode">
+            <p>Want to try without signing up?</p>
+            <button id="freeModeBtn">Continue as Guest</button>
+        </div>
+
+        <script src="auth.js"></script>
     </body>
 </html>
-
-        <script>
-           
-        </script>
-       
-
-       
+        

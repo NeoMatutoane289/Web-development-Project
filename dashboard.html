@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SpaZaTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="logo-section">
+                <h2>SpaZaTrack</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#profile" class="nav-link active">Store Profile</a></li>
+                <li><a href="#inventory" class="nav-link">Inventory</a></li>
+                <li><a href="#reports" class="nav-link">Reports</a></li>
+                <li><a href="#settings" class="nav-link">Settings</a></li>
+            </ul>
+            <div class="nav-footer">
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h1>Store Profile</h1>
+                <button id="editProfileBtn" class="edit-btn">Edit Profile</button>
+            </div>
+
+            <div class="profile-display" id="profileDisplay">
+                <div class="profile-card">
+                    <h2>Store Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Store Name:</label>
+                            <span id="displayStoreName">-</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Business Type:</label>
+                            <span id="displayBusinessType">-</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Description:</label>
+                            <span id="displayDescription">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Contact Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Phone:</label>
+                            <span id="displayPhone">-</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Email:</label>
+                            <span id="displayEmail">-</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Website:</label>
+                            <span id="displayWebsite">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Address</h2>
+                    <div class="info-grid">
+                        <div class="info-item full-width">
+                            <label>Full Address:</label>
+                            <span id="displayFullAddress">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Operating Hours</h2>
+                    <div class="hours-display" id="displayHours">
+                        <!-- Hours will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-edit" id="profileEdit" style="display: none;">
+                <!-- This will contain the same form as storeProfile.html but in edit mode -->
+                <div class="edit-form-container">
+                    <h2>Edit Store Profile</h2>
+                    <form id="editStoreProfileForm">
+                        <!-- Form fields will be populated by JavaScript -->
+                    </form>
+                    <div class="form-buttons">
+                        <button type="button" id="saveChangesBtn">Save Changes</button>
+                        <button type="button" id="cancelEditBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
