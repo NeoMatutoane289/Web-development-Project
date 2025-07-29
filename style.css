@@ -311,3 +311,28 @@
     font-family: Segoe UI;
 }
 
+#freeMode{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#suggestion{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+#appName2{
+    text-align: center;
+    font-family: Segoe UI;
+    background: #3498db;
+    width: 100%;
+}
+
+#setIdText{
+    text-align: center;
+    font-family: Segoe UI;
+}
+
+h2{
+    font-weight: bolder;
+}
